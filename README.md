@@ -68,18 +68,14 @@ Create a table that breaks down school performance based on average spending ran
 
 Use the code provided below to create four bins with reasonable cutoff values to group school spending.
 
-` spending_bins = [0, 585, 630, 645, 680] `
-` labels = ["<$585", "$585-630", "$630-645", "$645-680"] `
+` spending_bins = [0, 585, 630, 645, 680] labels = ["<$585", "$585-630", "$630-645", "$645-680"] `
 
 Use `pd.cut` to categorize spending based on the bins.
 
 Use the following code to then calculate mean scores per spending range.
 
-`spending_math_scores = school_spending_df.groupby(["Spending Ranges (Per Student)"])["Average Math Score"].mean()`
-`spending_reading_scores = school_spending_df.groupby(["Spending Ranges (Per Student)"])["Average Reading Score"].mean()`
-`spending_passing_math = school_spending_df.groupby(["Spending Ranges (Per Student)"])["% Passing Math"].mean()`
-`spending_passing_reading = school_spending_df.groupby(["Spending Ranges (Per Student)"])["% Passing Reading"].mean()`
-`overall_passing_spending = school_spending_df.groupby(["Spending Ranges (Per Student)"])["% Overall Passing"].mean()`
+`spending_math_scores = school_spending_df.groupby(["Spending Ranges (Per Student)"])["Average Math Score"].mean() spending_reading_scores = school_spending_df.groupby(["Spending Ranges (Per Student)"])["Average Reading Score"].mean() spending_passing_math = school_spending_df.groupby(["Spending Ranges (Per Student)"])["% Passing Math"].mean() spending_passing_reading = school_spending_df.groupby(["Spending Ranges (Per Student)"])["% Passing Reading"].mean() overall_passing_spending = school_spending_df.groupby(["Spending Ranges (Per Student)"])["% Overall Passing"].mean()`
+
 Use the scores above to create a DataFrame called `spending_summary`.
 
 Include the following metrics in the table:
@@ -97,8 +93,7 @@ Include the following metrics in the table:
 # Scores by School Size
 Use the following code to bin the per_school_summary.
 
-`size_bins = [0, 1000, 2000, 5000]`
-`labels = ["Small (<1000)", "Medium (1000-2000)", "Large (2000-5000)"]`
+`size_bins = [0, 1000, 2000, 5000] labels = ["Small (<1000)", "Medium (1000-2000)", "Large (2000-5000)"]`
 
 Use `pd.cut` on the "Total Students" column of the `per_school_summary` DataFrame.
 
